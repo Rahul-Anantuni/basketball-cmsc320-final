@@ -24,8 +24,28 @@ The introduction should motivate your work: what is your topic? What questions a
 ## 3. Data Curation
 Cite the source(s) of your data. Explain what it is. Transform the data so that it is ready for analysis. For example, set up a database and use SQL to query for data, or organize a pandas DataFrame.
 
+
+import kagglehub
+import pandas as pd
+import os
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, accuracy_score
+from scipy import stats
+from scipy.stats import chi2_contingency
+
 ## 4. Exploratory Data Analysis
 (See checkpoint 2.)
+
+
+
 
 ## 5. Primary Analysis
 Based on the results of your exploration, choose a machine learning technique (e.g., classification, regression, clustering, etc.) that will help you answer the questions you posed in the introduction. Explain your reasoning.
