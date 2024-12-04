@@ -1,35 +1,9 @@
 <!DOCTYPE html>
-<section id="nba-data-science-project">
-    <h1>NBA Data Science Project</h1>
-
-    <h2>Team Members:</h2>
-    <ul>
-        <li>Rahul Anantuni</li>
-        <li>Ritvik Venkat</li>
-        <li>Ben Weatherhead</li>
-        <li>Soumil Girdhar</li>
-        <li>Anshul Ganumpally</li>
-    </ul>
-
-    <h2>Contributions:</h2>
-    <p>For each member, list which of the following sections they worked on, and summarize the contributions in 1-2 sentences. Be specific!</p>
-    <ul>
-        Rahul worked on initially loading in the dataset. He worked on the 3rd statistical method for checkpoint 2 as well as the data visualization part for chthe final part. He also worked to compile all the code and insights into a final submission website hosted on GitHub.
-        <li><strong>A:</strong> Project idea</li>
-        <li><strong>B:</strong> Dataset Curation and Preprocessing</li>
-        <li><strong>C:</strong> Data Exploration and Summary Statistics</li>
-        <li><strong>D:</strong> ML Algorithm Design/Development</li>
-        <li><strong>E:</strong> ML Algorithm Training and Test Data Analysis</li>
-        <li><strong>F:</strong> Visualization, Result Analysis, Conclusion</li>
-        <li><strong>G:</strong> Final Tutorial Report Creation</li>
-        <li><strong>H:</strong> Additional (not listed above)</li>
-    </ul>
-</section>
 
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>320_Final_Project_Checkpoint_2 (3) (1)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>320_Final_Project_Checkpoint_2 (5)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7535,12 +7509,25 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="What-NBA-Position-Do-You-Play?">What NBA Position Do You Play?<a class="anchor-link" href="#What-NBA-Position-Do-You-Play?">¶</a></h1><p>Fall 2024 Data Science Project</p>
+<p>Ritvik Venkat, Rahul Anantuni, Ben Weatherhead, Soumil Girdhar, Anshul Ganumpally</p>
+<p>Dataset Source: <a href="https://www.kaggle.com/datasets/wyattowalsh/basketball">https://www.kaggle.com/datasets/wyattowalsh/basketball</a></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Rahul Anantuni (UID: 118581965)</span>
@@ -7564,13 +7551,6 @@ a.anchor-link {
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">accuracy_score</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
 <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">chi2_contingency</span>
-
-<span class="n">path</span> <span class="o">=</span> <span class="n">kagglehub</span><span class="o">.</span><span class="n">dataset_download</span><span class="p">(</span><span class="s2">"wyattowalsh/basketball"</span><span class="p">)</span>
-
-<span class="n">data_files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">'csv'</span><span class="p">)</span>
-
-<span class="n">data_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_files</span><span class="p">,</span> <span class="s1">'draft_combine_stats.csv'</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7609,15 +7589,34 @@ a.anchor-link {
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="3---Data-Curation">3 - Data Curation<a class="anchor-link" href="#3---Data-Curation">¶</a></h1><p>Kaggle Link: <a href="https://www.kaggle.com/datasets/wyattowalsh/basketball">https://www.kaggle.com/datasets/wyattowalsh/basketball</a><br/>
+Description: The dataset contains NBA player combine statistics from 2000 onwards, including various physical attributes such as height, weight, wingspan, bench press performance, and position. This data offers insights into the physical profiles of players, providing a comprehensive view of their measurable athletic abilities.</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Initial DataFrame Info:"</span><span class="p">)</span>
+<div class="highlight hl-python"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">kagglehub</span><span class="o">.</span><span class="n">dataset_download</span><span class="p">(</span><span class="s2">"wyattowalsh/basketball"</span><span class="p">)</span>
+
+<span class="n">data_files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">'csv'</span><span class="p">)</span>
+
+<span class="n">data_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_files</span><span class="p">,</span> <span class="s1">'draft_combine_stats.csv'</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Initial DataFrame Info:"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Missing Values:"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
@@ -7800,7 +7799,7 @@ dtype: int64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Handling Missing Values</span>
@@ -7819,7 +7818,7 @@ dtype: int64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
@@ -7837,7 +7836,7 @@ dtype: int64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">columns_to_drop</span> <span class="o">=</span> <span class="p">[</span>
@@ -7953,6 +7952,17 @@ First few rows of the cleaned DataFrame:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4---Exploratory-data-analysis">4 - Exploratory data analysis<a class="anchor-link" href="#4---Exploratory-data-analysis">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Test 1</strong></p>
 <p>Position vs Strength (Bench Press)</p>
 </div>
@@ -7963,7 +7973,7 @@ First few rows of the cleaned DataFrame:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">strength_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'position'</span><span class="p">,</span> <span class="s1">'bench_press'</span><span class="p">,</span> <span class="s1">'body_fat_pct'</span><span class="p">]]</span>
@@ -7984,7 +7994,7 @@ First few rows of the cleaned DataFrame:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">strength_stats</span> <span class="o">=</span> <span class="n">strength_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'position'</span><span class="p">)[[</span><span class="s1">'bench_press'</span><span class="p">,</span> <span class="s1">'body_fat_pct'</span><span class="p">]]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">'mean'</span><span class="p">,</span> <span class="s1">'std'</span><span class="p">,</span> <span class="s1">'min'</span><span class="p">,</span> <span class="s1">'max'</span><span class="p">])</span>
@@ -8000,7 +8010,7 @@ First few rows of the cleaned DataFrame:
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div class="colab-df-container" id="df-d82e361f-7c0e-48b9-a16b-d92f25a3a040">
 <div>
@@ -8363,7 +8373,7 @@ First few rows of the cleaned DataFrame:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Boxplot for bench_press across positions</span>
@@ -8408,7 +8418,7 @@ First few rows of the cleaned DataFrame:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Separate data by the 5 positions</span>
@@ -8452,7 +8462,7 @@ ANOVA Body Fat %: F-statistic=36.16877365618975, p-value=1.4639722800408588e-28
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.stats.multicomp</span> <span class="kn">import</span> <span class="n">pairwise_tukeyhsd</span>
@@ -8516,7 +8526,7 @@ group1 group2 meandiff p-adj   lower   upper  reject
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Correlation within each position</span>
@@ -8576,7 +8586,7 @@ Name: (bench_press, body_fat_pct), dtype: float64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -8596,7 +8606,7 @@ Name: (bench_press, body_fat_pct), dtype: float64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Now we calculated the means and standard deviations</span>
@@ -8644,7 +8654,7 @@ Name: (bench_press, body_fat_pct), dtype: float64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Now find the z statistic and p value</span>
@@ -8662,7 +8672,7 @@ Name: (bench_press, body_fat_pct), dtype: float64
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>0.0</pre>
 </div>
@@ -8685,7 +8695,7 @@ Name: (bench_press, body_fat_pct), dtype: float64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Dataframe for plotting</span>
@@ -8732,7 +8742,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">'bar'</span><span class="p">)</span>
@@ -8750,7 +8760,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>&lt;matplotlib.legend.Legend at 0x79eaab5de110&gt;</pre>
 </div>
@@ -8793,7 +8803,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">weight_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'weight'</span><span class="p">,</span> <span class="s1">'position'</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -8864,7 +8874,7 @@ Expected Frequencies:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">weight_df</span><span class="p">[</span><span class="s1">'weight_class'</span><span class="p">],</span> <span class="n">weight_df</span><span class="p">[</span><span class="s1">'position'</span><span class="p">])</span>
@@ -8932,11 +8942,10 @@ The Chi Squared value is 907.76 and the pvalue is 2.632e-177, which indicates a 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># Preparing the dataset</span>
-<span class="n">strength_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'position'</span><span class="p">,</span> <span class="s1">'height_without_shoes'</span><span class="p">,</span> <span class="s1">'weight'</span><span class="p">,</span> <span class="s1">'body_fat_pct'</span><span class="p">,</span> <span class="s1">'bench_press'</span><span class="p">,</span> <span class="s1">'wingspan'</span><span class="p">,</span> <span class="s1">'lane_agility_time'</span><span class="p">,</span> <span class="s1">'standing_reach'</span><span class="p">,</span> <span class="s1">'hand_length'</span><span class="p">]]</span>
+<div class="highlight hl-python"><pre><span></span><span class="n">strength_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'position'</span><span class="p">,</span> <span class="s1">'height_without_shoes'</span><span class="p">,</span> <span class="s1">'weight'</span><span class="p">,</span> <span class="s1">'body_fat_pct'</span><span class="p">,</span> <span class="s1">'bench_press'</span><span class="p">,</span> <span class="s1">'wingspan'</span><span class="p">,</span> <span class="s1">'lane_agility_time'</span><span class="p">,</span> <span class="s1">'standing_reach'</span><span class="p">,</span> <span class="s1">'hand_length'</span><span class="p">]]</span>
 <span class="n">strength_df</span> <span class="o">=</span> <span class="n">strength_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
 <span class="n">strength_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'Unknown'</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
 <span class="n">strength_df</span><span class="p">[</span><span class="s1">'position'</span><span class="p">]</span> <span class="o">=</span> <span class="n">strength_df</span><span class="p">[</span><span class="s1">'position'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">'PG'</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'PG'</span><span class="p">,</span> <span class="s1">'PG-SG'</span><span class="p">]</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
@@ -8945,23 +8954,21 @@ The Chi Squared value is 907.76 and the pvalue is 2.632e-177, which indicates a 
 <span class="n">strength_df</span><span class="p">[</span><span class="s1">'position'</span><span class="p">]</span> <span class="o">=</span> <span class="n">strength_df</span><span class="p">[</span><span class="s1">'position'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">'PF'</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'PF'</span><span class="p">,</span> <span class="s1">'PF-SF'</span><span class="p">,</span><span class="s1">'PF-C'</span><span class="p">]</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
 <span class="n">strength_df</span><span class="p">[</span><span class="s1">'position'</span><span class="p">]</span> <span class="o">=</span> <span class="n">strength_df</span><span class="p">[</span><span class="s1">'position'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">'C'</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'C-PF'</span><span class="p">]</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
 
-<span class="c1"># Step 1: Features and target variable</span>
 <span class="n">features</span> <span class="o">=</span> <span class="n">strength_df</span><span class="p">[[</span><span class="s1">'height_without_shoes'</span><span class="p">,</span> <span class="s1">'weight'</span><span class="p">,</span> <span class="s1">'body_fat_pct'</span><span class="p">,</span> <span class="s1">'bench_press'</span><span class="p">,</span> <span class="s1">'wingspan'</span><span class="p">,</span> <span class="s1">'lane_agility_time'</span><span class="p">,</span> <span class="s1">'standing_reach'</span><span class="p">]]</span>
 <span class="n">target</span> <span class="o">=</span> <span class="n">strength_df</span><span class="p">[</span><span class="s1">'position'</span><span class="p">]</span>
 
-<span class="c1"># Step 2: Encode the target variable</span>
 <span class="n">label_encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
 <span class="n">target_encoded</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
 
-<span class="c1"># Step 3: Split into train and test sets</span>
+
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">target_encoded</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
-<span class="c1"># Step 4: Scale the features</span>
+<span class="c1"># Scale the features</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 <span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
 <span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
-<span class="c1"># Models to evaluate</span>
+
 <span class="n">models</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'KNN'</span><span class="p">:</span> <span class="n">KNeighborsClassifier</span><span class="p">(),</span>
     <span class="s1">'DecisionTree'</span><span class="p">:</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">),</span>
@@ -8969,7 +8976,7 @@ The Chi Squared value is 907.76 and the pvalue is 2.632e-177, which indicates a 
     <span class="s1">'RandomForest'</span><span class="p">:</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="c1"># Step 5: Train and evaluate each model</span>
+<span class="c1"># Train and evaluate each model</span>
 <span class="k">for</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Training </span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">..."</span><span class="p">)</span>
     <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -9104,8 +9111,8 @@ weighted avg       0.70      0.69      0.69       361
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Heat Map Visualization</strong></p>
-<p>The goal of a heat map visualization is to show which factors have a strong relationship and which ones have no relationship. It also helps us understand if we have multicolinearity so that we don't double count variables. Additionally if two variables have no relationship then it is possible that one could be removed to reduce noise.</p>
+<p><strong>Feature Correlation Visualization</strong></p>
+<p>The goal of a feature correlation visualization is to show which factors have a strong relationship and which ones have no relationship. It also helps us understand if we have multicolinearity so that we don't double count variables. Additionally if two variables have no relationship then it is possible that one could be removed to reduce noise.</p>
 </div>
 </div>
 </div>
@@ -9114,13 +9121,10 @@ weighted avg       0.70      0.69      0.69       361
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># Visualization</span>
-
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">strength_df</span><span class="p">[</span><span class="n">strength_df</span><span class="p">[</span><span class="s1">'position'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'Unknown'</span><span class="p">]</span>
+<div class="highlight hl-python"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">strength_df</span><span class="p">[</span><span class="n">strength_df</span><span class="p">[</span><span class="s1">'position'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'Unknown'</span><span class="p">]</span>
 <span class="n">label_encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">'PositionEncoded'</span><span class="p">]</span> <span class="o">=</span> <span class="n">label_encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'position'</span><span class="p">])</span>
 
@@ -9173,6 +9177,16 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Linear-Regression-Visualization"><strong>Linear Regression Visualization</strong><a class="anchor-link" href="#Linear-Regression-Visualization">¶</a></h1><p>Linear Regressional Visualization shows the relationship between each of the features and position. This provides us with another way of seeing the correlations we saw in the heatmap. The steeper lines show that there is a stronger relationship between the feature and position.</p>
 </div>
 </div>
@@ -9182,7 +9196,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">position_mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"PG"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"SG"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"SF"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"PF"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
@@ -9281,6 +9295,8 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <li><p>Predictive Accuracy: Machine learning models, particularly Random Forest, demonstrated high accuracy in predicting player positions based on physical attributes, offering a valuable tool for recruitment and talent evaluation.</p>
 </li>
 <li><p>Strategic Recommendations: Recruitment strategies should focus on leveraging predictive models to streamline player selection processes and tailor training regimens to position-specific requirements, optimizing team performance.</p>
+</li>
+<li><p>Explanation of accuracy of model: While the Logistic Regression accuracy is pretty high, being above 70%, it makes sense why it is not higher. In recent years basketball has been morphing into a more "positionless" game, meaning players do not always play one set position and can play more than one. Additionally teams now of days have been known to run lineups that do not necessarily follow the classic PG, SG, SF, PF, C convention where each position gets heavier and taller.</p>
 </li>
 </ol>
 <p>Future Directions: Expanding the dataset to include gameplay statistics and historical trends could provide deeper insights, enhancing recruitment and training strategies further. Additionally, integrating real-time player performance metrics could refine the predictive accuracy of our models. Overall, the results demonstrate that physical attributes are strong predictors of player positions, validating the importance of tailored analysis in sports data science. Future research could explore position-specific injury risks or optimize player fitness programs using advanced predictive analytics.</p>
